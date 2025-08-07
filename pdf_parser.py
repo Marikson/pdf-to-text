@@ -220,6 +220,8 @@ def write_summary_to_file(filename="summary.txt"):
                 val = common_cost_data["Hot Water"].get(key, "")
                 if val is not None:
                     f.write(f"  {key}: {val}\n")
+                else:
+                    f.write(f"  {key}: N/A\n")
             f.write("\n")
             # Heating
             f.write("Heating:\n")
@@ -227,6 +229,8 @@ def write_summary_to_file(filename="summary.txt"):
                 val = common_cost_data["Heating"].get(key, "")
                 if val is not None:
                     f.write(f"  {key}: {val}\n")
+                else:
+                    f.write(f"  {key}: N/A\n")
             f.write("\n")
             # Electricity
             f.write("Electricity:\n")
@@ -234,6 +238,8 @@ def write_summary_to_file(filename="summary.txt"):
                 val = electricity_data.get(key, "")
                 if val is not None:
                     f.write(f"  {key}: {val}\n")
+                else:
+                    f.write(f"  {key}: N/A\n")
             f.write("\n")
             # All together
             f.write("All together:\n")
